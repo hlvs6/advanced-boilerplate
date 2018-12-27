@@ -1,0 +1,33 @@
+//Подставить сюда переменные
+
+.footer {
+
+    background-color: #373e42;
+
+    &__row {
+
+        display: flex;
+
+        &--bb1ee {
+
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    &__lb, &__rb {
+        
+        width: 50%;
+    }
+
+    &__lb {
+        
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__rb {
+
+        display: flex;
+        justify-content: flex-end;
+    }
+}
