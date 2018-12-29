@@ -1,8 +1,11 @@
 .hero {
 
-    &__avatar {
+    &__img {
 
         border-radius:50%;
+        width: 100px;
+        height: 100px;
+        background-position: centet center;
     }
 
     &__name {

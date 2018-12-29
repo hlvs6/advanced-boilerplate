@@ -22,8 +22,8 @@ mixin menu(menuClass)
         each item in menuItems
           a(class='menu__item' href=item.href)= item.name
 
-mixin hero(heroClass, heroImgSrc, heroAlt, heroName, heroTitle)
+mixin hero(heroClass, heroImg, heroAlt, heroName, heroTitle)
     div.hero
-        +image(heroImgSrc, heroAlt, 'hero__avatar')
+        +image(`png/${heroImg}.png`, heroAlt, 'hero__img')
         .hero__name= heroName
         .hero__title= heroTitle
