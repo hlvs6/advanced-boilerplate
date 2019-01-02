@@ -7,9 +7,10 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  +socials('socials-in-footer')
-  h1 Страничка "Обо Мне 1"  
-  +hero('hero__in_footer', 'avatar', 'Дуэйн Скала Джонсон', 'Двейн', 'Супер рестлер')
+  section.header
+    +socials('socials-in-footer')
+    +hero('hero__in_footer', 'avatar', 'Дуэйн Скала Джонсон', 'Двейн', 'Супер рестлер')
+    +icon('hamburger', 'header__icon-menu')
   h1.title_striped Большой заголовок
   <br/>
   h2.title_striped Средний заголовок

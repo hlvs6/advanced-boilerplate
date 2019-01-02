@@ -1,0 +1,13 @@
+.header {
+
+    position: relative;
+
+    &__icon-menu {
+
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}
