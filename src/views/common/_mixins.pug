@@ -25,6 +25,7 @@ mixin menu(menuClass)
 mixin hero(heroClass, heroImg, heroAlt, heroName, heroTitle, heroBg)
     div(class=`hero ${heroClass}`)
         +image(`png/${heroImg}.png`, heroAlt, 'hero__img')
-        .hero__bg
+        if heroBg
+        +icon(heroBg, 'hero__bg')
         .hero__name= heroName
         .hero__title= heroTitle
