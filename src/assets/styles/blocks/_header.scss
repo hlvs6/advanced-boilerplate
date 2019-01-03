@@ -23,17 +23,19 @@
     &__hero {
 
         position: absolute;
-        top: 30%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%);
     }
 
-    &__arrow-down {
+    &__icon-down {
 
         position: absolute;
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
     }
 }
 
