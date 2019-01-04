@@ -1,4 +1,24 @@
 .skills {
 
-    background: linear-gradient(to right, $beige 50%, $light-grey 50% 100%); 
+    position: relative;
+    background: linear-gradient(to right, $beige 50%, $light-grey 0); 
+
+    @media (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
+
+    &:before {
+
+        position: absolute;
+        top: -300px;
+        height: calc(100% + 300px);
+        width: 100%;
+        content: "";
+        z-index: -1;
+        background: $beige;
+        
+        @media (min-width: 1200px) {
+            background: linear-gradient(90deg, $beige 50%, $light-grey 0);
+        }
+    }
 }
