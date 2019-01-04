@@ -20,12 +20,20 @@
         right: 10px;
     }
 
+    &__hero-bg {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     &__hero {
 
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%);
+        transform: translate(-50%, -50%);
     }
 
     &__icon-down {
