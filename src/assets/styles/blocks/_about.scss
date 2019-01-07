@@ -96,3 +96,25 @@
         display: inline-block;
     }
 }
+
+.skill {
+
+    &__figure {
+
+        width: 80px;
+        height: 80px;
+    }
+
+    &__circle {
+
+        &--under {
+
+            fill: red;
+        }
+
+        &--above {
+
+            fill: green;
+        }
+    }
+}
