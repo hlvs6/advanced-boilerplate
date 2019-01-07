@@ -28,6 +28,7 @@ block content
       .about__right-description
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit mollitia nemo reprehenderit ipsam corrupti deleniti, blanditiis sit magni fuga eveniet hic sint illo? Quae harum voluptatem optio ipsum blanditiis. 
       .about__right-content
+        #skills-component
         - 
           var skills = [
             ['Frontend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
@@ -35,18 +36,7 @@ block content
             ['Workflow', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
           ]
 
-        ul.skills-list
-          each skillsrow in skills
-            li.skills-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
-              ul.skills-row__list
-                each skill in skillsrow[1]
-                  li.skills-row__item
-                    figure.skill(data-percents="70")
-                      svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle--under
-                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle--above
-                      .skill__title #{skill[0]}
+         
 
   //- section.map
   //-   .google-map
