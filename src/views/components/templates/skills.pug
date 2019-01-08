@@ -9,11 +9,11 @@ script(type="text/x-template")#skills-row
     .skills-row__title {{ skillsGroupObj.skillsGroup }}
       ul.skills-row__list
         li.skills-row__item(v-for="(skillPercentage, skillTitle) in skillsGroupObj.skills")
-          skill
+          skill( :skillPercentage="skillPercentage" :skillTitle="skillTitle")
 
 script(type="text/x-template")#skill
     figure.skill(data-percents="70")
       svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
         circle(cx="50" cy="50" r="40").skill__circle.skill__circle--under
         circle(cx="50" cy="50" r="40").skill__circle.skill__circle--above
-      .skill__title CSS3
+      .skill__title {{ skillTitle }}
