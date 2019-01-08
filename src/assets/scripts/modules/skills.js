@@ -5,7 +5,22 @@ const skill = {
         skillPercentage: Number,
         skillTitle: String
     },
-    template: '#skill'
+    template: '#skill',
+    methods: {
+
+        drawCircleDependsOnPercentage() {
+            const circle = this.$refs['circle']; 
+            const dashOffset = parseInt(
+                getComputedStyle(circle).getPropertyValue('stroke-dashoffset')
+            );
+            const percent = (dashOffset/100) * (100 - this.skillPercentage);
+            circle.style.strokeDashoffset = percent;
+        }
+    },
+    mounted() {
+        
+        this.drawCircleDependsOnPercentage();
+    }
 }
 
 const skillsRow = {

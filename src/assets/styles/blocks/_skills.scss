@@ -1,4 +1,21 @@
-// .skills {
+.skill {
 
-    
-// }
+    &__figure {
+
+        transform: rotate(-90deg);
+    }
+
+    &__circle {
+
+        fill: transparent;
+        stroke-width: 10px;
+        stroke: #ccc;
+
+        &--above {
+
+            stroke: green;
+            stroke-dasharray: 251;
+            stroke-dashoffset: 251;
+        }
+    }
+}
