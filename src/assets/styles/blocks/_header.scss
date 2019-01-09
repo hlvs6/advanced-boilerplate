@@ -1,0 +1,54 @@
+.header {
+
+    position: relative;
+    height: 100vh;
+    background: center center url('/assets/images/png/background-header.png') no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 0 80%, 50% 100%, 100% 80%, 100% 0);
+
+    &__socials {
+
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    &__hamburger {
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__hero-bg {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__hero {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__icon-down {
+
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.icon-hamburger {
+
+    width: 20px;
+    height: 20px;
+}

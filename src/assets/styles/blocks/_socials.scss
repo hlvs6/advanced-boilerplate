@@ -1,22 +1,22 @@
-.social_link {
-
-    padding: 7px 0;
-    display: inline-block;
-    text-align: center;
-    width: 35px;
-    height: 35px;
-
-    .icon {
-
-        width: 20px;
-        height: 20px;
-    }
-}
-
 .socials {
 
     padding: 10px;
 
+    .social_link {
+
+        padding: 7px 0;
+        display: inline-block;
+        text-align: center;
+        width: 35px;
+        height: 35px;
+    
+        .icon {
+    
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
     &--in_footer {
 
         .social_link {

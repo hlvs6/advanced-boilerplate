@@ -1,4 +1,4 @@
--var socials = [{icon: "github", href: "#"}, {icon: "check", href: "#"}, {icon: "check", href: "#"}] 
+-var socials = [{icon: "vk", href: "#"}, {icon: "github", href: "#"}, {icon: "in", href: "#"}] 
 -var menuItems = [{ name: "Мои работы", href: "#"}, { name: "Обо мне", href: "#"}, { name: "Блог", href: "#"}, { name: "Авторизация", href: "#"}]
 
 mixin icon(iconName, iconClass)
@@ -22,8 +22,8 @@ mixin menu(menuClass)
         each item in menuItems
           a(class='menu__item' href=item.href)= item.name
 
-mixin hero(heroClass, heroImg, heroAlt, heroName, heroTitle)
-    div.hero
+mixin hero(heroImg, heroAlt, heroName, heroTitle, heroBg)
+    .hero
         +image(`png/${heroImg}.png`, heroAlt, 'hero__img')
         .hero__name= heroName
         .hero__title= heroTitle

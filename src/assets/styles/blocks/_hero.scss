@@ -1,20 +1,29 @@
 .hero {
-
+    
     &__img {
 
         border-radius:50%;
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
     }
 
     &__name {
 
-        font-size: 20px;
-        font-weight: bold;
+        font-family: 'RobotoMedium', Helvetica, sans-serif; 
+        font-size: 35px;
+        font-weight: 500;
+        text-align: center;
+        color: #fff;
     }
 
     &__title {
-
-        font-size: 12px;
+        
+        font-family: 'RobotoLight', Helvetica, sans-serif; 
+        opacity: 0.8;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
     }
 }
