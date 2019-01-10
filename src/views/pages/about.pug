@@ -45,8 +45,9 @@ block content
                 ['phone', '+7-000-000-00-00'],
                 ['map_marker', 'г. Новосибирская ул. Инская д.5']
               ]
+
             each item, index in contacts
-              li.contacts__item.contacts-row
-                .contacts-row.contacts__icon
+              li.contacts__item
+                .contacts__icon
                   +icon(`${item[0]}`, 'contacts__icon-img')
-                .contacts-row.contacts__title #{item[1]}              
+                .contacts__title #{item[1]}              
