@@ -1,17 +1,18 @@
-script(type="text/x-template")#slider-wrap
+script(type="text/x-template")#slider
     .slider-wrap
         sliderSelectInfo
-        slider
-        
+        .slider
+            selectSlide
+            sliderBtns
 
-script(type="text/x-template")#slider-b-info-select
+script(type="text/x-template")#slider-select-info
     .slider-info
         .slider-info__title Информация о слайдере
 
+script(type="text/x-template")#selectSlide
+    .slider__main-slide
 
-script(type="text/x-template")#slider
-    .slider
-        .slider__main-slide
-        .slider__wrap-btn
-            .slider__control.slider__control--left 1
-            .slider__control.slider__control--right 2
+script(type="text/x-template")#sliderBtns
+    .slider__wrap-btn
+        .slider__control.slider__control--left 1
+        .slider__control.slider__control--right 2

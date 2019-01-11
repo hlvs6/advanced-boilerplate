@@ -1,15 +1,19 @@
 import Vue from 'vue'
 
 const sliderSelectInfo = {
-    template: '#slider-b-info-select',
+    template: '#slider-select-info',
 }
 
-const slider = {
-    template: '#slider'
+const selectSlide = {
+    template: '#selectSlide'
+}
+
+const sliderBtns = {
+    template: '#sliderBtns'
 }
 
 new Vue({
     el: '#slider-root',
-    components: { sliderSelectInfo, slider },
-    template: '#slider-wrap',
+    components: { sliderSelectInfo, selectSlide, sliderBtns },
+    template: '#slider',
 })
