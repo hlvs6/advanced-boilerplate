@@ -17,13 +17,8 @@ const selectSlide = {
 const sliderBtns = {
     template: '#sliderBtns',
     methods: {
-        slide(type) {
-            if (type === 'next') {
-                console.log('Следующая страница')
-            }
-            if (type === 'prev') {
-                console.log('Предыдущая страница страница')
-            }
+        slide(direction) {
+            this.$emit('slide', direction);
         }
     }
 }
@@ -40,6 +35,11 @@ new Vue({
     created() {
         this.works = require('../../../data/works.json');
         this.currentWork = this.works[0];
+    },
+    methods: {
+        handleSlide(direction) {
+            console.log(direction);
+        }
     },
     template: '#slider',
 })
