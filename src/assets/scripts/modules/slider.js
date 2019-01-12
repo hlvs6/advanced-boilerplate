@@ -29,16 +29,41 @@ new Vue({
     data() {
         return {
             works: [],
-            currentWork: {}
+            currentIndex: 0
         }
     },
     created() {
         this.works = require('../../../data/works.json');
-        this.currentWork = this.works[0];
+    },
+    computed: {
+        currentWork() {
+            return this.works[this.currentIndex]
+        }
+    },
+    watch: {
+        currentIndex(value) {
+            
+            const workAmountMinusOne = this.works.length - 1;
+
+            if (value > workAmountMinusOne) {
+                this.currentIndex = 0;
+            }
+
+            if (value < 0) {
+                this.currentIndex = workAmountMinusOne;
+            }
+        }
     },
     methods: {
         handleSlide(direction) {
-            console.log(direction);
+            switch(direction) {
+                case 'next' :
+                    this.currentIndex = this.currentIndex + 1
+                break
+                case 'prev' :
+                    this.currentIndex = this.currentIndex - 1
+                break
+            }
         }
     },
     template: '#slider',
