@@ -42,19 +42,19 @@ new Vue({
     },
     watch: {
         currentIndex(value) {
-            
-            const workAmountMinusOne = this.works.length - 1;
-
-            if (value > workAmountMinusOne) {
-                this.currentIndex = 0;
-            }
-
-            if (value < 0) {
-                this.currentIndex = workAmountMinusOne;
-            }
+            this.makeInfiniteSliding(value);
         }
     },
     methods: {
+        makeInfiniteSliding(value) {
+            const workAmountMinusOne = this.works.length - 1;
+            if (value > workAmountMinusOne) {
+                this.currentIndex = 0;
+            }
+            if (value < 0) {
+                this.currentIndex = workAmountMinusOne;
+            }
+        },
         handleSlide(direction) {
             switch(direction) {
                 case 'next' :
