@@ -38,6 +38,7 @@ gulp.task("clean", () => {
 });
 
 // собираем скрипты webpack
+
 gulp.task("scripts", () => {
   return gulp
     .src(`${config.SRC_DIR}/scripts/*.js`)
