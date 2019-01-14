@@ -3,7 +3,7 @@ script(type="text/x-template")#slider
         sliderSelectInfo(:work="currentWork")
         .slider
             selectSlide(:work="currentWork")
-            sliderBtns(@slide="handleSlide")
+            sliderBtns(@slide="handleSlide" :works="works" :index="currentIndex")
 script(type="text/x-template")#slider-select-info
     .slider-info
         .slider-info__title {{ work.title }}
@@ -13,5 +13,7 @@ script(type="text/x-template")#selectSlide
 
 script(type="text/x-template")#sliderBtns
     .slider__wrap-btn
-        .slider__control.slider__control--left(@click="slide('next')") 1
-        .slider__control.slider__control--right(@click="slide('prev')") 2
+        .slider__control.slider__control--right(@click="slide('prev')")
+            img(:src="prevButtonWorks[index].photo", alt="фото")
+        .slider__control.slider__control--left(@click="slide('next')")
+            img(:src="nextButtonWorks[index].photo", alt="фото")
