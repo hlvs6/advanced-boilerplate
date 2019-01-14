@@ -14,6 +14,6 @@ script(type="text/x-template")#selectSlide
 script(type="text/x-template")#sliderBtns
     .slider__wrap-btn
         .slider__control.slider__control--right(@click="slide('prev')")
-            img(:src="prevButtonWorks[index].photo", alt="фото")
+            img(:src="prevButtonWorks[index].photo", alt="фото", class="img-control-slider")
         .slider__control.slider__control--left(@click="slide('next')")
-            img(:src="nextButtonWorks[index].photo", alt="фото")
+            img(:src="nextButtonWorks[index].photo", alt="фото", class="img-control-slider")
