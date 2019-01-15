@@ -1,0 +1,17 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Обо мне'
+
+block scripts
+    script(src='blog.bundle.js')
+
+block content
+    .blog 
+        .blog__left-side 
+            .blog__menu-item Первый пункт меню
+            .blog__menu-item.blog__menu-item--active Второй пункт меню
+        .blog__right-side 
+            .blog__article-title Заголовок
+            .blog__article-time 14.02.2019
+            .blog__article-content Здесь будут новости статьи 
