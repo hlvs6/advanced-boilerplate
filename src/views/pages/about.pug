@@ -10,14 +10,13 @@ block content
 
   section.about
     .about__left
-      .about__left-title
-        .title_striped Обо мне
+      .about__left-title.title_striped Обо мне
+      +image('png/about_header.png', 'title', 'about__left-bg-title')
       .about__left-content
         .user-description
           +image('png/avatar.png','Avatar','user-description__image')
           .user-description__data
-            .user-description__title
-              .block-subtitle Кто я 
+            .user-description__title.title_striped Кто я 
             .user-description__text.text-content
               p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
               p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
