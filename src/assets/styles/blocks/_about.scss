@@ -27,7 +27,7 @@
     &__left {
 
         width: 50%;
-        padding: 20px;
+        padding: 40px;
     }
 
     &__left-title {
@@ -44,21 +44,28 @@
     &__right {
 
         width: 50%;
+        padding: 40px;
     }
 
     &__right-title {
 
+        display: block;
+        width: 300px;
+        margin: 0 auto 40px;
         font-size: 10px;
+        font-size: 35px;
+        font-family: 'BernierRegular';
+        font-weight: normal;
     }
 
     &__right-description {
 
-        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 50px;
     }
 
     &__right-content {
 
-        padding: 10px;
     }
 }
 
@@ -83,12 +90,13 @@
 
         font-size: 20px;
         font-weight: bold;
-
+        margin-bottom: 15px;
     }
 
     &__list {
 
         padding-left: 0px;
+        margin-bottom: 30px;
     }
 
     &__item {

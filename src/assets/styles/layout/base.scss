@@ -52,12 +52,16 @@ p {
   font-weight:700;
   position:relative;  
   padding: 0 30px;
+  text-align: center;
   text-transform:uppercase;
   display: inline-block;
 
+
   &:before,
   &:after {
-    background:#D4CD36;
+
+    opacity: 0.2;
+    background-color: #373e42;
     content:"";
     display:block;
     height:5px;
@@ -67,13 +71,11 @@ p {
 
   &:before {  
     left:0;
-    top:50%;
-    transform: translateY(-50%);
+    top:0.5em;
   }
   
   &:after {
     right:0;
-    top:50%;
-    transform: translateY(-50%);
+    top:0.5em;
   }
 }
