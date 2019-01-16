@@ -30,10 +30,19 @@
         color: $text-color;
         margin-bottom: 10px;
 
+        button {
+
+            user-select: none;
+        }
+
         &--active {
 
             color: $green;
             border-right: 4px solid $green;
+
+            button {
+                color: $green;
+            }
         }
     }
 
