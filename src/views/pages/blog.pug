@@ -19,7 +19,7 @@ block content
 
         section.blog__articles.js-blog__articles
             each article in articles
-                .blog__article.js-blog__article 
+                .blog__article.js-blog__article(data-article=article.index)
                     .blog__article-title= article.title
                     .blog__article-time(datetime=article.datetime)= article.date
                     .blog__article-content= article.text
