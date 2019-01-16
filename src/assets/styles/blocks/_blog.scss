@@ -3,24 +3,27 @@
     font-family: Roboto;
     font-size: 16px;
     font-weight: normal;
-    color: $text-color;
+    color: $text-color;                 
 
-    &__left-side {
+    &__aside {
 
         width: 40%;
         display: inline-block;
         vertical-align: top;
     }
 
-    &__right-side {
+    &__aside-list {
 
-        width: 60%;
-        display: inline-block;
-        vertical-align: top;
-        padding: 20px;
+        list-style: none;
+        padding-left: none;
     }
 
-    &__menu-item {
+    &__aside-item {
+
+        text-align: right;
+    }
+
+    &__aside-menu-item {
 
         padding: 10px 17px;
         text-align: right;
@@ -32,6 +35,20 @@
             color: $green;
             border-right: 4px solid $green;
         }
+    }
+
+
+    &__articles {
+
+        width: 60%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 20px;
+    }
+
+    &__article {
+
+        margin-bottom: 20px;
     }
 
     &__article-title {
