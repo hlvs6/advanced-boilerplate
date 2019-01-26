@@ -1,60 +1,104 @@
+.slider-header {
+
+    text-align: center;
+    padding-top: 20px;
+
+    &__title {
+
+        font-size: 35px;
+    }
+}
+
 .slider-wrap {
 
+    width: 100vw;
+    height: 100vh;
     margin-top: 20px;
+    display: grid;
+    grid-template: 
+        "display" 40%
+        "info" 30%
+        "btns" 30%
+        / 1fr;
+    @include desktop {
+        grid-template:
+        "info display" 70%
+        "info btns" 30%
+        / 1fr 1fr;  
+    }
 }
 
 .slider-info {
 
-    width: 400px;
-    height: 400px;
-    display: inline-block;
     padding: 20px;
     vertical-align: top;
+    grid-area: info;
 }
 
 .slider {
 
-    width: 400px;
-    height: 400px;
     background-color: $beige;
-    display: inline-block;
-
-    @media (max-width: $ldesk) {
-        background-color: blue;
-    }
-
-    @media (max-width: $desk) {
-        background-color: red;
-    }
-
-    @media (max-width: $tab) {
-        background-color: green;
-    }
 
     &__main-slide {
 
-        height: 200px;
         background-color: $light-grey;
+        grid-area: display;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    &__main-slide-img {
+
+        height: 100%;
+        flex: 0 0 100px;
     }
 
     &__wrap-btns {
 
-        border: 3px solid $light-grey;
+        grid-area: btns;
+        display: flex;
     }
 
     &__control {
 
         padding: 10px;
-        border: 3px solid $light-grey;
         width: 50%;
-        height: 200px;
-        display: inline-block;
         //Отменяем выделения текста при быстром кликанье по кнопкам
         user-select: auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__control-overlay {
+
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(181, 180, 174, 0.7);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    &__control-icon {
+        
+        width: 40px;
+        height: 40px;
+        fill: #fff;
+
+        &--down {
+
+            transform: rotate(180deg);
+        }
     }
 }
 
 .img-control-slider {
 
-    width: 100%;
+    width: auto;
+    max-height: 100px;
 }
