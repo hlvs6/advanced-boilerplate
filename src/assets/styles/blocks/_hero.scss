@@ -1,6 +1,8 @@
 .hero {
 
-    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 
     &__img {
 
@@ -12,25 +14,28 @@
 
     &__name {
 
-        font-family: 'RobotoMedium', Helvetica, sans-serif; 
+        display: inline-block;
+        color: #fff;
         font-size: 21px;
         font-weight: 500;
         line-height: 28px;
-        color: #fff;
-        display: inline-block;
-        white-space: nowrap;
+
+        @include mediaMixin(700px) {
+            font-size: 35px;
+            line-height: 45px;
+        }
     }
 
     &__title {
         
-        font-family: 'RobotoLight', Helvetica, sans-serif; 
-        opacity: 0.8;
-        font-family: Roboto;
+        display: inline-block;
         font-size: 16px;
         font-weight: 300;
         text-align: center;
+        opacity: 0.8;
         color: rgba(255, 255, 255, 0.8);
-        display: inline-block;
-        white-space: nowrap;
+        @include mediaMixin(700px) {
+            font-size: 16px;
+        }
     }
 }
