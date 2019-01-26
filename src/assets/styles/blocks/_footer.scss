@@ -1,10 +1,20 @@
 .footer {
 
     background-color: $grey;
+    opacity: 0.85;
 
     &__row {
 
-        display: flex;
+        display: grid;
+        grid-template: 
+        'lsite' min-content
+        'rsite' min-content
+        / 1fr;
+        
+
+        @include mediaMixin(1200px) {
+            grid-template: 'lsite rsite' 1fr / 1fr 1fr;
+        }
 
         &--bb1ee {
 
@@ -12,20 +22,25 @@
         }
     }
 
-    &__lb, &__rb {
-        
-        width: 50%;
-    }
-
     &__lb {
-        
-        display: flex;
-        justify-content: flex-start;
+
+        grid-area: 'lsite';
+        padding: 15px 15px 0 15px;
+        text-align: center;
+        @include mediaMixin(1200px) {
+            padding: 15px;
+            text-align: left;
+        }
     }
 
     &__rb {
 
-        display: flex;
-        justify-content: flex-end;
+        grid-area: 'rsite';
+        padding: 15px 15px 0 15px;
+        text-align: center;
+        @include mediaMixin(1200px) {
+            padding: 15px;
+            text-align: right;
+        }
     }
 }
