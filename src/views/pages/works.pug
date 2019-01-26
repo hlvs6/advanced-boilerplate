@@ -4,9 +4,13 @@ block scripts
   script(src='works.bundle.js')
   
 block content
+    .slider-header
+      .slider-header__title.title-striped Мои работы
+        .title-striped__bg(style={'background-image': 'url("/assets/images/png/works_header.png")'})
     #slider-root
     .about-me
-      .about-me__title.title-striped Что обо мне говорят
+      .comments__title.title-striped Что обо мне говорят
+        .title-striped__bg(style={'background-image': 'url("/assets/images/png/about_header.png")'})
       .wrap-comments
         .comments
           .comment

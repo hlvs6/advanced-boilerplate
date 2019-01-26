@@ -48,13 +48,13 @@ p {
 
 .title-striped {
 
-  font-weight:700;
-  position:relative;  
-  padding: 0 30px;
   text-align: center;
   text-transform:uppercase;
+  font-weight:700;
+  font-family: 'BernierRegular';
+  position:relative;  
+  padding: 0 30px;
   display: inline-block;
-
 
   &:before,
   &:after {
@@ -76,6 +76,19 @@ p {
   &:after {
     right:0;
     top:0.5em;
+  }
+
+  &__bg {
+    
+    position: absolute;
+    top: -130%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 300%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
