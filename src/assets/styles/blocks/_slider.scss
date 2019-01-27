@@ -1,32 +1,6 @@
-.slider-header {
-
-    text-align: center;
-    padding-top: 20px;
-
-    @include mediaMixin(1200px) {
-        padding-top: 60px;
-        padding-bottom: 20px;
-    }
-
-    &__title {
-
-        font-size: 35px;
-
-        @include mediaMixin(700px) {
-
-            font-size: 49px;
-        }
-
-        @include mediaMixin(1200px) {
-            font-size: 63px;
-        }
-    }
-}
-
 .slider-wrap {
 
     width: 100vw;
-    margin-top: 20px;
     display: grid;
     grid-template: 
         "display" min-content 
