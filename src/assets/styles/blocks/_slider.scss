@@ -43,15 +43,19 @@
 
 .slider-info {
     
-    vertical-align: top;
+    text-align: center;
     grid-area: info;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 
     &__wrap-title {
 
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 30px 0 20px 0;
+        padding: 30px 20px 20px 20px;
     }
 
     &__title {
@@ -59,7 +63,16 @@
         font-size: 21px;
         color: $text-color;
         font-weight: 400;
-        max-width: 245px;
+        width: 100%;
+        max-width: 460px;
+
+        @include mediaMixin(700px) {
+            font-size: 30px;
+        }
+
+        @include mediaMixin(1200px) {
+            font-size: 35px;
+        }
     }
 
     &__technology {
@@ -72,6 +85,14 @@
         font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
+        max-width: 350px;
+        width: 100%;
+        display: inline-block;
+
+        @include mediaMixin(700px) {
+
+            font-size: 16px;
+        }
     }
 
     &__wrap-btn {
@@ -91,6 +112,7 @@
         display: inline-block;
         padding: 10px 20px;
         font-size: 14px;
+
         span {
 
             display: inline-block;
@@ -124,10 +146,24 @@
     }
 
     &__main-slide-img {
-
-        width: 60%;
-        height: auto;
+        
+        width: auto;
+        height: 100%;
         display: inline-block;
+        max-height: 200px;
+        user-select: none;
+
+        @include mediaMixin(700px) {
+            max-height: 400px;
+        }
+
+        @include mediaMixin(1200px) {
+            max-height: 300px;
+        }
+
+        @include mediaMixin(1800px) {
+            max-height: 415px;
+        }
     }
 
     &__wrap-btns {
@@ -141,10 +177,16 @@
         padding: 10px;
         width: 50%;
         //Отменяем выделения текста при быстром кликанье по кнопкам
-        user-select: auto;
+        user-select: none;
         display: flex;
         justify-content: center;
         position: relative;
+        cursor: pointer;
+        max-height: 100px;
+
+        @include mediaMixin(700px) {
+            max-height: 225px;
+        }
     }
 
     &__control-overlay {
@@ -169,16 +211,30 @@
         left: 50%;
         transform: translate(-50%,-50%);
         fill: #fff;
+        opacity: 0.5;
+        
+
+        &:hover {
+            
+            opacity: 1;
+            cursor: pointer;
+        }
 
         &--down {
             
             transform: translate(-50%,-50%) rotate(180deg);
         }
     }
+
+    &__img-control-slider {
+
+        width: auto;
+        height: 100%;
+        max-height: 90px;
+
+        @include mediaMixin(700px) {
+            max-height: 125px;
+        }
+    }
 }
 
-.img-control-slider {
-
-    width: auto;
-    max-height: 100px;
-}
