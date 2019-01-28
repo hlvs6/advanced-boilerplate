@@ -1,0 +1,43 @@
+.contacts {
+
+    text-align: center;
+
+    &__title {
+
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: "BERNIERRegular";
+        font-size: 35px;
+        font-weight: normal;
+    }
+}
+
+.contact {
+
+    &__item {
+
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    &__icon {
+
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    &__icon-img {
+
+        width: 20px;
+        height: 20px;
+    }
+
+    &__title {
+
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: top;
+    }
+}

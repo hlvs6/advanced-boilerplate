@@ -1,0 +1,159 @@
+.about {
+
+    display: flex;
+    position: relative;
+    background: linear-gradient(to right, $beige 50%, $light-grey 0); 
+
+    @media (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
+
+    &:before {
+
+        position: absolute;
+        top: -300px;
+        height: calc(100% + 300px);
+        width: 100%;
+        content: "";
+        z-index: -1;
+        background: $beige;
+        
+        @media (min-width: 1200px) {
+            background: linear-gradient(90deg, $beige 50%, $light-grey 0);
+        }
+    }
+
+    //Левый блок
+    &__left {
+
+        width: 50%;
+        padding: 40px;
+        position: relative;
+    }
+
+    &__left-title {
+
+        font-size: 63px;
+        font-family: 'BERNIERRegular';
+        position: absolute;
+        top: 50px;
+        left: 60px;
+    }
+
+    &__left-bg-title {
+
+        position: absolute;
+        top: 25px;
+        left: 60px;
+    }
+
+    &__left-content {
+
+        padding: 20px 10px 10px 440px;
+    }
+
+    //Правый блок
+    &__right {
+
+        width: 50%;
+        padding: 40px;
+    }
+
+    &__right-title {
+
+        display: block;
+        width: 300px;
+        margin: 0 auto 40px;
+        font-size: 10px;
+        font-size: 35px;
+        font-family: 'BernierRegular';
+    }
+
+    &__right-description {
+
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    &__right-content {
+
+    }
+}
+
+.user-description {
+
+    &__image {
+        
+        width: 440px;
+        height: 390px;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+
+        display: block;
+        width: 200px;
+        margin: 0 auto 40px;
+        display: block;
+        font-size: 35px;
+        font-family: 'BernierRegular';
+    }
+}
+
+.skills-list {
+
+    padding-left: 0px;
+
+    &__item {
+
+        margin-right: 5px;
+
+        &:last-child {
+
+            margin-right: 0px;
+        }
+    }       
+}
+
+.skills-row {
+
+    &__title {
+
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    &__list {
+
+        padding-left: 0px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+
+        display: inline-block;
+    }
+}
+
+.skill {
+
+    &__figure {
+
+        width: 80px;
+        height: 80px;
+    }
+
+    &__circle {
+
+        &--under {
+
+            fill: red;
+        }
+
+        &--above {
+
+            fill: green;
+        }
+    }
+}

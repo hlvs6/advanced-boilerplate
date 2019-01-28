@@ -1,0 +1,215 @@
+.slider-wrap {
+
+    width: 100vw;
+    display: grid;
+    grid-template: 
+        "display" min-content 
+        "info" min-content
+        "btns" min-content
+        / 100%;
+    @include desktop {
+        grid-template:
+        "info display" 70%
+        "info btns" 30%
+        / 1fr 1fr;  
+    }
+}
+
+.slider-info {
+    
+    text-align: center;
+    grid-area: info;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    &__wrap-title {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px 20px 20px;
+    }
+
+    &__title {
+
+        font-size: 21px;
+        color: $text-color;
+        font-weight: 400;
+        width: 100%;
+        max-width: 460px;
+
+        @include mediaMixin(700px) {
+            font-size: 30px;
+        }
+
+        @include mediaMixin(1200px) {
+            font-size: 35px;
+        }
+    }
+
+    &__technology {
+
+        padding: 8px 0;
+        border-top: 1px solid $green;
+        border-bottom: 1px solid $green;
+        text-align: center;
+        color: $green;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        max-width: 350px;
+        width: 100%;
+        display: inline-block;
+
+        @include mediaMixin(700px) {
+
+            font-size: 16px;
+            max-width: 350px;
+        }
+    }
+
+    &__wrap-btn {
+
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__btn {
+
+        border-radius: 5px;
+        background-color: $green;
+        color: #fff;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+
+        span {
+
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 3px;
+            font-weight: 500;
+        }
+        
+    }
+
+    &__btn-icon {
+
+        width: 20px;
+        height: 20px;
+        fill: #fff;
+        margin-right: 10px;
+    }
+}
+
+.slider {
+
+    background-color: $beige;
+
+    &__main-slide {
+
+        display: inline-block;
+        grid-area: display;
+        text-align: center;
+        padding: 20px 0;
+        background-color: $light-grey;
+    }
+
+    &__main-slide-img {
+        
+        width: auto;
+        height: 100%;
+        display: inline-block;
+        max-height: 200px;
+        user-select: none;
+
+        @include mediaMixin(700px) {
+            max-height: 400px;
+        }
+
+        @include mediaMixin(1200px) {
+            max-height: 300px;
+        }
+
+        @include mediaMixin(1800px) {
+            max-height: 415px;
+        }
+    }
+
+    &__wrap-btns {
+
+        grid-area: btns;
+        display: flex;
+    }
+
+    &__control {
+
+        padding: 10px;
+        width: 50%;
+        //Отменяем выделения текста при быстром кликанье по кнопкам
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        max-height: 100px;
+
+        @include mediaMixin(700px) {
+            max-height: 225px;
+        }
+    }
+
+    &__control-overlay {
+
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(181, 180, 174, 0.7);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    &__control-icon {
+        
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        fill: #fff;
+        opacity: 0.5;
+        
+
+        &:hover {
+            
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &--down {
+            
+            transform: translate(-50%,-50%) rotate(180deg);
+        }
+    }
+
+    &__img-control-slider {
+
+        width: auto;
+        height: 100%;
+        max-height: 90px;
+
+        @include mediaMixin(700px) {
+            max-height: 125px;
+        }
+    }
+}
+

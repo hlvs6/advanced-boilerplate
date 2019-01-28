@@ -1,0 +1,48 @@
+extends ../main.layout.pug
+
+block scripts
+  script(src='works.bundle.js')
+  
+block content
+    .title-header
+      .title-header__title.title_striped Мои работы
+        .title_striped__bg(style={'background-image': 'url("/assets/images/png/works_header.png")'})
+    #slider-root
+    
+    .about-me-contact
+      .title-header
+        .title-header__title.title_striped Что обо мне говорят
+          .title_striped__bg(style={'background-image': 'url("/assets/images/png/about_header.png")'})
+      .wrap-comments
+        .comments
+          .comment
+            .comment__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .comment__wrap-person
+              +image('png/kovalchuk.png','kovalchuk','comment__img-person')
+              .comment__person-title
+                .comment__person-title
+                    span.strong Ковальчук Дмитрий 
+                    br
+                    span основатель Loftschool
+          .comment
+            .comment__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .comment__wrap-person
+              +image('png/sabantsev.png','sabantsev','comment__img-person')
+              .comment__person-title
+                .comment__person-title
+                    span.strong Сабантцев Владимир 
+                    br
+                    span преподаватель Loftschool
+      .form-contact
+        .form-contact__title-form-wrap
+          .form-contact__title-form.title_striped Связаться со мной
+        .form-contact__wrap-inputs
+          input.form-contact__input(placeholder="Имя")
+          input.form-contact__input(placeholder="Email")
+          textarea(name="", cols="30", rows="10", placeholder="Ваше сообщение").form-contact__input 
+        .form-contact__btns
+          button.form-contact__btn.form-contact__btn--submit Отправить
+          button.form-contact__btn Очистить
+
+
+        

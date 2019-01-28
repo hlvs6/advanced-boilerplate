@@ -1,29 +1,53 @@
-.social_link {
-
-    padding: 7px 0;
-    display: inline-block;
-    text-align: center;
-    width: 35px;
-    height: 35px;
-
-    .icon {
-
-        width: 20px;
-        height: 20px;
-    }
-}
-
 .socials {
 
-    padding: 10px;
+    .social_link {
 
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 35px;
+        
+        .icon {
+    
+            max-width: 25px;
+            max-height: 16px;
+            fill: #ffffff;
+            opacity: 0.5;
+
+            &:hover {
+
+                opacity: 1;
+            }
+        }
+
+        &:last-child {
+
+            margin-right: 0px;
+        }
+    }
+    
     &--in_footer {
 
         .social_link {
 
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            border: 1px solid #eee;
-            margin-right: 5px;
+            border: 1px solid #f9f9f9;
+            opacity: 0.5;
+            margin-right: 10px;
+
+            &:hover {
+
+                background-color: #fff;
+                opacity: 1;
+
+                .icon {
+                    fill: $grey;
+                    opacity: .8;
+                }
+            }
+            
 
             &:last-child {
 

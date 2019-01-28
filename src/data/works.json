@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title" : "Сайт школы онлайн образования",
+      "skills" : "Html, Css, JavaScript",
+      "photo" : "assets/images/content/slider/work-1.png",
+      "link" : "//google.com"
+    },
+    {
+      "id": 2,
+      "title" : "Портал о работе удаленно",
+      "skills" : "Html, Css, JavaScript",
+      "photo" : "assets/images/content/slider/work-2.png",
+      "link" : "//yandex.ru"
+    },
+    {
+      "id": 3,
+      "title" : "Портал видеоуроков",
+      "skills" : "Html, Css, JavaScript",
+      "photo" : "assets/images/content/slider/work-3.png",
+      "link" : "//rambler.ru"
+    },
+    {
+      "id": 4,
+      "title" : "Школа студия йоги",
+      "skills" : "Html, Css, JavaScript",
+      "photo" : "assets/images/content/slider/work-4.png",
+      "link" : "//vk.com"
+    }
+]

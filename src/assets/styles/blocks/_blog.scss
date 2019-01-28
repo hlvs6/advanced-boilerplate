@@ -1,0 +1,85 @@
+.blog {
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    color: $text-color;                 
+
+    &__aside {
+
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+        top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+    &__aside-list {
+
+        list-style: none;
+        padding-left: none;
+        position: sticky;
+        top: 20px;
+    }
+
+    &__aside-item {
+
+        text-align: right;
+    }
+
+    &__aside-menu-item {
+
+        padding: 10px 17px;
+        text-align: right;
+        color: $text-color;
+        margin-bottom: 10px;
+
+        button {
+
+            user-select: none;
+        }
+
+        &--active {
+
+            color: $green;
+            border-right: 4px solid $green;
+
+            button {
+                color: $green;
+            }
+        }
+    }
+
+
+    &__articles {
+
+        width: 60%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 20px;
+    }
+
+    &__article {
+
+        margin-bottom: 20px;
+    }
+
+    &__article-title {
+
+        font-family: 'BERNIERRegular';
+        font-size: 35px;
+        margin-bottom: 28px;
+    }
+
+    &__article-time {
+
+        margin-bottom: 25px;
+        color: $green;
+    }
+
+    &__article-content {
+        
+        margin-bottom: 25px;
+    }
+}

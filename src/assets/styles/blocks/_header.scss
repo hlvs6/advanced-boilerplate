@@ -1,0 +1,75 @@
+.header {
+
+    position: relative;
+    height: 100vh;
+    background: center center url('/assets/images/png/background-header.png') no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
+
+    @include mediaMixin(700px) {
+        height: 600px;
+    }
+
+    &__socials {
+
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    &__hamburger {
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        fill: #fff;
+        opacity: 0.5;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__hero-bg-title {
+        
+        display: none;
+
+        @include mediaMixin(1200px) {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__hero {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    &__icon-down {
+
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 25px;
+        height: 25px;
+        fill: #fff;
+        opacity: 0.7;
+        cursor: pointer;
+
+        &:hover {
+
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.map {
+
+    position: relative;
+    height: 400px;
+
+    &__google-map {
+
+        background:url('/assets/images/png/map_scheme.png') no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    &__data {
+
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translateX(-50%);
+        background-color: #ccc;
+        opacity: 0.6;
+        padding: 35px 40px;
+        width: 380px;
+        height: 290px;
+        background-color: $light-grey;
+        opacity: 0.85;
+    }
+}

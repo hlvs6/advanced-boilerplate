@@ -7,4 +7,45 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне 1"  
+
+  section.about
+    .about__left
+      .about__left-title.title_striped Обо мне
+      +image('png/about_header.png', 'title', 'about__left-bg-title')
+      .about__left-content
+        .user-description
+          +image('png/avatar.png','Avatar','user-description__image')
+          .user-description__data
+            .user-description__title.title_striped Кто я 
+            .user-description__text.text-content
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+              p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+    
+    .about__right
+      .about__right-title.title_striped Чем я могу быть вам полезен
+      .about__right-description
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку. 
+      .about__right-content
+        #skills-component
+
+  section.map
+    .map__google-map
+    .map__data
+      .contacts
+        h2.contacts__title
+          .title_striped Контакты
+        address.contacts__data
+          ul.contacts__list
+            - 
+              var contacts = [
+                ['skype', 'skype_kdn'],
+                ['envelope', 'astahov@gmail.com'],
+                ['phone', '+7-000-000-00-00'],
+                ['map_marker', 'г. Новосибирская ул. Инская д.5']
+              ]
+
+            each item, index in contacts
+              li.contact__item
+                .contact__icon
+                  +icon(`${item[0]}`, 'contact__icon-img')
+                .contact__title #{item[1]}              

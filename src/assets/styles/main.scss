@@ -1,4 +1,6 @@
 @import 'normalize.css';
+@import './_mixins.scss';
 @import './layout/fonts.scss';
+@import './layout/mixins.scss';
 @import './layout/base.scss';
 @import './blocks/*.scss';

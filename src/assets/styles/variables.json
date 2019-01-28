@@ -5,5 +5,7 @@
   "text-color": "#455a64",
   "grey": "#373e42",
   "light-grey": "#dfdcd5",
-  "test" : "#000"
+  "tab": "600px",
+  "desk": "1200px",
+  "ldesk": "1800px"
 }

@@ -1,0 +1,29 @@
+script(type="text/x-template")#slider
+    .slider-wrap
+        sliderSelectInfo(:work="currentWork")
+        selectSlide(:work="currentWork")
+        sliderBtns(@slide="handleSlide" :works="works" :index="currentIndex")
+script(type="text/x-template")#slider-select-info
+    .slider-info
+        .slider-info__wrap-title
+            .slider-info__title.title_striped {{ work.title }}
+        .slider-info__technology  {{ work.skills }}
+        .slider-info__wrap-btn
+            button.slider-info__btn 
+                +icon('link','slider-info__btn-icon')
+                span Посмотреть сайт
+
+script(type="text/x-template")#selectSlide
+    .slider__main-slide
+        img(:src="work.photo", alt="").slider__main-slide-img
+
+script(type="text/x-template")#sliderBtns
+    .slider__wrap-btns
+        .slider__control.slider__control--right(@click="slide('prev')")
+            .slider__control-overlay
+            +icon('arrow_down', 'slider__control-icon')
+            img(:src="prevButtonWorks[index].photo", alt="фото", class="slider__img-control-slider")
+        .slider__control.slider__control--left(@click="slide('next')")
+            .slider__control-overlay
+            +icon('arrow_down', 'slider__control-icon slider__control-icon--down')
+            img(:src="nextButtonWorks[index].photo", alt="фото", class="slider__img-control-slider")

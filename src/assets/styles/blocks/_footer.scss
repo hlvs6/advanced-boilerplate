@@ -1,33 +1,47 @@
-//Подставить сюда переменные
-
 .footer {
 
-    background-color: #373e42;
+    background-color: $grey;
+    opacity: 0.85;
+    color: rgba(255, 255, 255, 0.5);
 
     &__row {
 
-        display: flex;
+        display: grid;
+        grid-template: 
+        'lsite' min-content
+        'rsite' min-content
+        / 1fr;
+        padding: 10px;
+        
+        @include mediaMixin(1200px) {
+            grid-template: 'lsite rsite' 1fr / 1fr 1fr;
+        }
 
         &--bb1ee {
 
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
         }
     }
 
-    &__lb, &__rb {
-        
-        width: 50%;
-    }
-
     &__lb {
-        
-        display: flex;
-        justify-content: flex-start;
+
+        grid-area: 'lsite';
+        padding: 10px;
+        text-align: center;
+        @include mediaMixin(1200px) {
+            padding: 15px;
+            text-align: left;
+        }
     }
 
     &__rb {
 
-        display: flex;
-        justify-content: flex-end;
+        grid-area: 'rsite';
+        padding: 10px;
+        text-align: center;
+        @include mediaMixin(1200px) {
+            padding: 15px;
+            text-align: right;
+        }
     }
 }
