@@ -1,10 +1,10 @@
 .about-me-contact {
 
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 290px;
+    margin-bottom: -295px;
     background-image: url('assets/images/png/bg_form_contact-min.png');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center bottom;
 }
 
 .wrap-comments {
@@ -81,11 +81,11 @@
 
 .form-contact {
 
-    max-width: 300px;
     margin: 20px auto;
+    max-width: 350px;
     border-radius: 5px;
     overflow: hidden;
-    background-color: rgba(158, 158, 158, 0.15);
+    background-color: rgba(205, 205, 205, 0.85);
 
     @include mediaMixin(700px) {
         max-width: 350px;
@@ -118,6 +118,8 @@
         border-radius: 5px; 
         color: $grey;
         border: 1px solid transparent;
+        min-height: 50px;
+        resize: vertical;
 
         &::placeholder {
 

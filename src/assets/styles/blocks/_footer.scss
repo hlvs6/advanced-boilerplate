@@ -2,6 +2,7 @@
 
     background-color: $grey;
     opacity: 0.85;
+    color: rgba(255, 255, 255, 0.5);
 
     &__row {
 
@@ -10,22 +11,22 @@
         'lsite' min-content
         'rsite' min-content
         / 1fr;
+        padding: 10px;
         
-
         @include mediaMixin(1200px) {
             grid-template: 'lsite rsite' 1fr / 1fr 1fr;
         }
 
         &--bb1ee {
 
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
         }
     }
 
     &__lb {
 
         grid-area: 'lsite';
-        padding: 15px 15px 0 15px;
+        padding: 10px;
         text-align: center;
         @include mediaMixin(1200px) {
             padding: 15px;
@@ -36,7 +37,7 @@
     &__rb {
 
         grid-area: 'rsite';
-        padding: 15px 15px 0 15px;
+        padding: 10px;
         text-align: center;
         @include mediaMixin(1200px) {
             padding: 15px;
